@@ -43,7 +43,7 @@
   "main": "bitcore.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitpay/bitcore.git"
+    "url": "https://github.com/auroracointools/bitcore.git"
   },
   "scripts": {
     "install": "node-gyp rebuild",
@@ -85,7 +85,8 @@
     "event-stream": "~3.1.5",
     "gulp-concat": "~2.2.0",
     "gulp": "~3.8.2",
-    "preconditions": "^1.0.7"
+    "preconditions": "^1.0.7",
+    "scryptsy": "0.2.x"
   },
   "testling": {
     "harness": "mocha-bdd",

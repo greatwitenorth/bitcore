@@ -949,7 +949,8 @@ Block.prototype.parse = function parse(parser, headerOnly) {
 Block.prototype.calcHash = function calcHash() {
   var header = this.getHeader();
 
-  return util.twoSha256(header);
+//  return util.twoSha256(header);
+  return util.scrypt(header);
 };
 
 Block.prototype.checkHash = function checkHash() {
@@ -1052,7 +1053,8 @@ Block.prototype.getMerkleTree = function getMerkleTree(txs) {
       var i2 = Math.min(i + 1, size - 1);
       var a = tree[j + i];
       var b = tree[j + i2];
-      tree.push(util.twoSha256(Buffer.concat([a, b])));
+//      tree.push(util.twoSha256(Buffer.concat([a, b])));
+      tree.push(util.scrypt(Buffer.concat([a, b])));
     }
     j += size;
   }
